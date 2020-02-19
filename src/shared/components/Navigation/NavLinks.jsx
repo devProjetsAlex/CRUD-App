@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 
 import './NavLinks.css'
 
-const NavLink = props => {
+const NavLinks = props => {
     return (
         <ul className='nav-links'>
             <li>
@@ -21,3 +21,5 @@ const NavLink = props => {
         </ul>
     )
 }
+
+export default NavLinks
