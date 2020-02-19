@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 /* Imported HOC */
 import {CSSTransition} from 'react-transition-group'
-
 /* App page */
 import './SideDrawer.css'
-
 const SideDrawer = props => {
-
     const content=  (
-
     <CSSTransition
     in={props.show}
     timeout={200}
@@ -18,7 +13,7 @@ const SideDrawer = props => {
     mountOnEnter
     unmountOnExit
     >
-    <aside className='side-drawer'>{props.children}</aside>;
+    <aside className='side-drawer' onClick={props.onClick}>{props.children}</aside>
 
     </CSSTransition>
     
