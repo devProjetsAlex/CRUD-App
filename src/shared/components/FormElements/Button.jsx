@@ -41,7 +41,7 @@ const Button = props => {
         ${props.danger && 'button--danger'} 
         `} 
         type={props.type}
-        onClick={props.onCLick}
+        onClick={props.onClick}
         disabled={props.disabled}
         >
             {props.children}
