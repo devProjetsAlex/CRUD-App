@@ -4,7 +4,7 @@ import Card from '../../shared/components/Cards/Card'
 import Button from '../../shared/components/FormElements/Button';
 import Modal from '../../shared/components/Modal/Modal';
 import './PlaceItem.css';
-
+import MapGL from '../../Api/MapBox/Map.component'
 const PlaceItem = props => {
   const [showMap, setShowMap] = useState(false);
 
@@ -22,9 +22,12 @@ const PlaceItem = props => {
         footerClass="place-item__modal-actions"
         footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
       >
+
         <div className="map-container">
-          <h2>THE MAP!</h2>
+          <MapGL center={props.coordinates} zoom={16} />
         </div>
+
+
       </Modal>
       <li className="place-item">
         <Card className="place-item__content">
