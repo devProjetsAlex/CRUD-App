@@ -3,11 +3,9 @@ import ReactMapGl, {Marker} from 'react-map-gl';
 import * as userData from '../../places/pages/UserPlaces'
 
 export default function Map() {
-  
-
   const [viewport, setViewport] = useState({
-    latitude: 46.165742315,
-    longitude: -71.227009767104,
+    latitude:40.7484405,
+    longitude: -73.9878584,
     width: "37.3vw",
     height: "40vh",
     zoom: 10
@@ -29,7 +27,7 @@ export default function Map() {
           latitude={userLocations.location.lat}
           longitude={userLocations.location.lng}
           >
-            <div>&#10060; </div>
+            <div> &#10060; </div>
           </Marker>
         ))}
     </ReactMapGl>  
