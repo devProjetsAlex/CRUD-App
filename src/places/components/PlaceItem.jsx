@@ -4,7 +4,7 @@ import Card from '../../shared/components/Cards/Card'
 import Button from '../../shared/components/FormElements/Button';
 import Modal from '../../shared/components/Modal/Modal';
 import './PlaceItem.css';
-import MapGL from '../../Api/MapBox/Map.component'
+import Map from '../../Api/MapBox/Map.component'
 const PlaceItem = props => {
   const [showMap, setShowMap] = useState(false);
 
@@ -24,7 +24,7 @@ const PlaceItem = props => {
       >
 
         <div className="map-container">
-          <MapGL center={props.coordinates} zoom={16} />
+          <Map />
         </div>
 
 
