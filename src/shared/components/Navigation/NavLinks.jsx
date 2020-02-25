@@ -1,7 +1,10 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink,Switch} from 'react-router-dom'
 
 import './NavLinks.css'
+
+
+
 
 const NavLinks = props => {
     return (
@@ -15,9 +18,10 @@ const NavLinks = props => {
             <li>
                 <NavLink to='/places/new'>ADD PLACES </NavLink>
             </li>
-            <li>
+            <li>        
+                
                 <NavLink to='/auth'> AUTHENTICATE </NavLink>
-            </li>
+             </li>
         </ul>
     )
 }
