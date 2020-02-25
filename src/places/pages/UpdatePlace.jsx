@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 
 import './UpdatePlace.css'
@@ -38,6 +38,7 @@ const DUMMY_PLACES = [
   ];
   
   const UpdatePlace = () => {
+    const [isLoading, setIsLoading] = useState(true)
     const placeId = useParams().placeId;
     
     
@@ -70,6 +71,7 @@ const DUMMY_PLACES = [
       },
     true
     )
+    setIsLoading(false)
     }, [setFormData, identifiedPlace])
 
   
@@ -88,7 +90,7 @@ const DUMMY_PLACES = [
         </div>
       );
     }
-    if (!formState.inputs.title.value) {
+    if (isLoading) {
       return (
         <div className="center">
           <h2>Loading...</h2>

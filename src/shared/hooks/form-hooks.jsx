@@ -19,7 +19,7 @@ const formReducer = (state, action) => {
           },
           isValid: formIsValid
         };
-    case 'SET_DATA':
+    case 'SET_DATA': // imputation du hook data vérification du isValid
       return {
         inputs: action.inputs,
         isValid: action.formIsValid
