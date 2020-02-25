@@ -9,7 +9,7 @@ export default function Map() {
     longitude: -73.9878584,
     width: "39.3vw",
     height: "40vh",
-    zoom: 10
+    zoom: 3
   });
 
   return (
