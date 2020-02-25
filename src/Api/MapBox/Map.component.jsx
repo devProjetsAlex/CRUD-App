@@ -27,8 +27,8 @@ export default function Map() {
           key={userLocations.id}
           latitude={userLocations.location.lat}
           longitude={userLocations.location.lng}
-          >
-            <span> &#10060; </span>
+          >           
+          &#10060;
           </Marker>
         ))}
     </ReactMapGl>  
