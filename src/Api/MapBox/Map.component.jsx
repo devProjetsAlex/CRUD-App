@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactMapGl, {Marker} from 'react-map-gl';
 import * as userData from '../../places/pages/UserPlaces'
 
-export default function Map() {
+const Map = () => {
 
   const [viewport, setViewport] = useState({
     latitude:48.7484405,
@@ -10,10 +10,12 @@ export default function Map() {
     width: "39.3vw",
     height: "40vh",
     zoom: 3
+
   });
 
   return (
     <div>
+
     <ReactMapGl
       {...viewport}
       mapStyle="mapbox://styles/devprojetsalex/ck6zdo8vw0fjd1ili5b1pj0pj"
@@ -22,16 +24,23 @@ export default function Map() {
         setViewport(viewport)
       }}
       >
+
+
         {userData.DUMMY_PLACES.map((userLocations) => (
           <Marker
           key={userLocations.id}
           latitude={userLocations.location.lat}
           longitude={userLocations.location.lng}
-          >           
+          >
+
           &#10060;
+
           </Marker>
         ))}
     </ReactMapGl>  
+
     </div>
   );
 }
+
+export default Map
